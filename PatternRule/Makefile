@@ -1,17 +1,21 @@
 CC=gcc
-SRC=src/
+SRC=src
 BUILD=build
-OBJECT:=$(patsubst src/%.c,%.o ,$(wildcard $(SRC)*.c))
+OBJECT:=$(patsubst src/%.c,build/%.o ,$(wildcard $(SRC)/*.c))
 
 .PHONY:clean 
-
+# all:
+# 	echo $(OBJECT)
 exe:$(OBJECT)
-	cd $(BUILD)/ && $(CC) -o ../exe $^
+
+	cd $(BUILD)/ && $(CC) -o ../exe *.o
 
 
-$(OBJECT):%.o:$(SRC)%.c
-	$(CC) -c $^ -o $(BUILD)/$@
+# $(OBJECT):%.o:$(SRC)/%.c
+# 	$(CC) -c $^ -o $(BUILD)/$@
 
-clean:
-	rm $(BUILD)/*.o 
-	rm exe
+$(BUILD)/%.o:$(SRC)/%.c
+	$(CC) -c $^ -o $@
+# clean:
+# 	rm $(BUILD)/*.o 
+# 	rm exe

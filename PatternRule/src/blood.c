@@ -1,10 +1,9 @@
-#include <stdio.h>
-
-int getBlood(int a){
-    printf(" Blood gettingg  . . .  its so cute");
-}
+#include<stdio.h>
 
 int changeBlood(int a){
-    printf("change blood");
+    printf("get a Blood ");
 }
 
+int getBlood(int a){
+    printf("unrgent change my Blood");
+}
