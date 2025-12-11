@@ -1,0 +1,10 @@
+int getHeart(int,int);
+int getLungs(int);
+int changeHeart(int,int);
+int sugeryHeart(int);
+int repairLunges(int);
+int removeLunges(int);
+int changeBlood(int);
+int getBlood(int);
+int leftEye(int);
+int rightEye(int);
